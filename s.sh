@@ -24,4 +24,6 @@ cd frp/
 rm -rf frpc*
 #vim frps.ini
 nohup ./frps -c frps.ini >/dev/null 2>&1 &
-echo "cd /root/frp/ && nohup ./frps -c frps.ini >/dev/null 2>&1 &" >>/etc/rc.local
+echo "nohup /root/frp/frps -c /root/frp/frps.ini >/dev/null 2>&1 &" >>/etc/rc.local
+chmod +x /etc/rc.local >/dev/null 2>&1 &
+chmod +x /etc/rc.d/rc.local >/dev/null 2>&1 &
